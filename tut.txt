@@ -1,0 +1,50 @@
+#include<string>
+#include<stdlib.h>
+#include<windows.h>
+using namespace std;
+int main(){
+    srand((NULL));
+    string s[12]={"Astronauts","Atlantic","Bob Behnken","Cape Canaveral","Capsule","Crew Dragon","Crewed Flight","Demo","Docking","Doug HUrley","Elon Musk"};
+    char map[12][12];
+    for(int i=0;i<12;i++)
+    {
+        for(int j=0;j<10;j++)
+        {
+            do
+            map[i][j]=rand();
+            while(!(map[i][j]>=97 && map[i][j]<=122));
+
+
+            
+        }
+    }
+    int p=rand()%12;
+    int row,col;
+    if(s[p].length()%2!=0)
+    {
+        row = rand()%2;
+        col = rand()%10;
+        int c;
+        for(int c=0; col; s[p][c]!='\0',c++,col++)
+        map[row][col]=s[p][c];
+
+    }
+    else
+    {
+        row = rand()%2;
+        col = rand()%10;
+        int c;
+        for(int c=0; row; s[p][c]!='\0',c++,row++)
+        map[row][col]=s[p][c];
+    }
+    cout<<"\n\t";
+    for(int i=0;i<12;i++)
+    {
+        for(int j=0;j<12;j++)
+        cout<<map[i][j]<<" ";
+        cout<<"\n\t";
+    }
+    
+
+
+}
